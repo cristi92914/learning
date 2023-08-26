@@ -1,0 +1,100 @@
+.container{
+    display: grid;
+    min-width: 100vw;
+    min-height: 100vh;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-areas: 
+    "div1 div1 div1"
+    "div2 div3 div4"
+    "div5 div6 div7";
+    gap: 20px;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container > *:nth-child(2){
+/* #div-1 { */
+    grid-area: div1;
+    align-self: start;
+}
+
+/* #div-2 { */
+.container > *:nth-child(3){
+    grid-area: div2;
+}
+
+.container > *:nth-child(4){
+    /* #div-3 { */
+    grid-area: div3;
+    /* align-self: start; */
+    /* margin: 0px auto; */
+    /* margin-top: 0px; */
+    align-self: start;
+    /* display: flex; */
+    /* align-items: start; */
+}
+
+/* #div-4 { */
+.container > *:nth-child(5){
+    grid-area: div4;
+}
+
+.container > *:nth-child(6){
+/* { */
+    grid-area: div5;
+}
+
+.container > *:nth-child(7) {
+/* #div-6 { */
+    grid-area: div6;
+    margin-bottom: 0px;
+    /* align-items: end; */
+    /* display: flex; */
+    align-self: end;
+    /* align-items: end; */
+}
+
+
+.container > *:nth-child(8) {
+    /* #div-7 { */
+    grid-area: div7;
+}
+
+.container > *:nth-child(9) {
+    position: absolute;
+    margin: 0;
+    order: -2;
+    align-self: end;
+    justify-self: end;
+    padding: 0;
+}
+
+.container > *:nth-child(1) {
+    position: absolute;
+    margin: 0;
+    order: -2;
+    align-self: start;
+    padding: 0;
+}
+
+.container > *:not(:nth-child(1)):hover {
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+div > *{
+    color: blue;
+    align-self: center;
+    margin: 40px auto 40px auto;
+}
